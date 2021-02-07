@@ -51,36 +51,3 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter'
     ],
 }
-
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-    'formatters': {
-        'verbose': {
-            'format':
-                '%(pathname)s:%(lineno)d (%(funcName)s) '
-                '%(levelname)s %(message)s',
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-    },
-    'handlers': {
-        'null': {
-            'level': 'DEBUG', 'class': 'logging.NullHandler',
-        },
-        'stderr': {
-            'level': 'DEBUG',
-            'formatter': 'simple',
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['stderr'],
-            'propagate': True,
-            'level': 'WARNING',
-        },
-    },
-}
